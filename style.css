@@ -1,5 +1,6 @@
 :root {
     --primary-color:#d70f64;
+    --gray: rgba(128,128,128,0.208) ;
 }
 
 *{
@@ -12,11 +13,13 @@ body{
     font-family: 'Open Sans',  sans-serif;
 }
 
+/* Navigation */
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0 1.8rem;
 }
 
 nav.active{
@@ -24,6 +27,7 @@ nav.active{
 }
 
 nav >.logo{
+ padding: 1rem 0;
  color: var(--primary-color);
  font-size: 1.6rem;
  font-weight: 600;
@@ -32,7 +36,101 @@ nav >.logo{
  align-items: center;
 }
 
+nav > .logo > svg {
+    margin-right: 0.3rem ;
+    display: none;
+}
+
 nav > svg {
     cursor: pointer;
+}
+
+nav .login-btn{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    border-right: 1px solid var(--gray);
+    border-left: 1px solid var(--gray);
+    padding: 1.4rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.login-btn span {
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+/* Hero section */
+section.hero {
+    padding: 0 1rem;
+    height: 500px;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.hero .bg-wrapper{
+    position: absolute;
+    width: 38%;
+    margin-left: 62%;
+    background-image: url("./images/hero-bg-xl.png");
+    height: 100%;
+    display: block;
+    z-index: -1;
+    float: right;
+    max-height: 335px;
+    background-size: cover;
+}
+
+.hero .actions {
+    margin-top: 4rem;
+}
+
+.actions .input-container{
+    position: relative;
+}
+
+.actions input {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #dcdcdc;
+    color: #333;
+    font-size: 0.9rem;
+    box-shadow: 0 0.3rem 2rem rgb(0 0 0 /10%);
+}
+
+.actions input::placeholder{
+    color: darkgrey;
+}
+
+.hero > h3{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: 9rem;
+    min-width: 220px;
+    width: 70%;
+}
+
+
+@media screen and (min-width:786px) {
+    nav>.logo>svg{
+        display: inline;
+    } 
+}
+
+
+@media screen and (min-width:960px) {
+    nav> .profile-icon-medium{
+        display: none;
+    }   
+
+    nav .login-btn{
+        display: inline-flex;
+    }
 }
 
