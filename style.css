@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .max-w-xl {
@@ -77,7 +78,6 @@ section.hero {
     position: relative;
 }
 
-
 .hero h3 {
     font-size: 2rem;
     padding-left: 1rem;
@@ -86,7 +86,6 @@ section.hero {
     min-width: 220px;
     width: 70%;
 }
-
 
 .hero .bg-wrapper {
     position: absolute;
@@ -132,7 +131,6 @@ section.hero {
     right: 20px;
 }
 
-
 .actions button {
     background-color: var(--primary-color);
     margin-top: 1rem;
@@ -147,13 +145,40 @@ section.hero {
     font-weight: 30;
 }
 
+/* Partners Section  */
+
+.partners {
+    margin: 4rem 0;
+}
+
+.partners .backdrop-text {
+    padding: 0 2rem;
+}
+
+.partners .caption {
+    padding: 0 2rem;
+}
+
+.partners .background-image {
+    background-image: url("./images/partner-bg.png");
+    min-height: 280px;
+    background-size: cover;
+    height: 100%;
+}
+
+.partners .content {
+    background-color: white;
+    margin: 0 1rem;
+    margin-top: -4rem;
+    padding: 1rem 1.2rem;
+}
+
 
 
 @media screen and (min-width:786px) {
     nav>.logo>svg {
         display: inline;
     }
-
 
     .hero h3 {
         padding-left: 3rem;
@@ -220,5 +245,18 @@ section.hero {
     .hero .bg-wrapper {
         max-height: 550px;
     }
+}
 
+.Partner_div {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.Partner_image {
+    background-image: url();
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
